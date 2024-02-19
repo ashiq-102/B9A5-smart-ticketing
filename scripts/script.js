@@ -121,8 +121,8 @@ applyBtn.addEventListener("click", function () {
 
 
 
-const nextButton = document.getElementById("num")
-nextButton.addEventListener("keyup", function () {
+const numberInput = document.getElementById("num")
+numberInput.addEventListener("keyup", function () {
     const btn =document.getElementById("next")
 
     const phoneNumber = document.getElementById("num").value
