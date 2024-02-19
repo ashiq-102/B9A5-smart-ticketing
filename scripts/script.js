@@ -57,6 +57,10 @@ for(const btn of allBtn){
 
             li.appendChild(p2)
 
+            const totalPrice=document.getElementById("total-price").innerText
+            const convertedTotalPrice=parseInt(totalPrice)
+            document.getElementById("total-price").innerText=convertedTotalPrice+parseInt(takaId)
+
 
 
 
@@ -69,7 +73,7 @@ for(const btn of allBtn){
         
         }
         else{
-            alert()
+            alert('you can select maximum four')
         }
         
         
