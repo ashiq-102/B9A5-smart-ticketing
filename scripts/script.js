@@ -121,15 +121,16 @@ applyBtn.addEventListener("click", function () {
 
 
 
-const numberInput = document.getElementById("num")
+let numberInput = document.getElementById("num")
 numberInput.addEventListener("keyup", function () {
     const btn =document.getElementById("next")
+    let count=document.getElementById("seat-count").innerText
 
     const phoneNumber = document.getElementById("num").value
-    if (phoneNumber.length === 11) {
+    if (phoneNumber.length === 11 && count>0) {
         btn.removeAttribute("disabled")
     }
-    else {
+    else if(phoneNumber.length!=11) {
 
         btn.setAttribute("disabled", true)
     }
