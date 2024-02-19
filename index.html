@@ -13,6 +13,13 @@
 
     <link rel="stylesheet" href="styles/style.css">
 
+    <style>
+        li {
+    display: flex;
+    justify-content: space-around;
+}
+    </style>
+
 
 </head>
 
@@ -38,6 +45,7 @@
 
         <!-- banner  -->
 
+       <section id="banner">
         <div class="hero min-h-screen" style="background-image: url(./images/banner.png);">
             <div class="hero-overlay bg-opacity-60"></div>
             <div class="hero-content text-center text-neutral-content">
@@ -46,10 +54,11 @@
                     <h2 class=" text-[#1DD100] text-7xl font-extrabold mx-auto">P Paribahan</h2>
                     <p class="mb-5 mt-2 text-2xl mx-auto ">Welcome to everyone.Everyone can experience a smooth journey
                         by receiving our services </p>
-                    <button class="bg-[#1DD100] text-black text-lg font-bold px-4 btn py-4 mx-auto">Buy Tickets</button>
+                    <button onclick="buyTicketButtonClick()" class="bg-[#1DD100] text-black text-lg font-bold px-4 btn py-4 mx-auto">Buy Tickets</button>
                 </div>
             </div>
         </div>
+       </section>
 
     </header>
 
@@ -132,7 +141,7 @@
                            
 
                             <div>
-                                <a class="btn text-[#1DD100] bg-[#1DD1001A]"><img src="./images/seat-green.png" alt=""> <span>40</span>
+                                <a class="btn text-[#1DD100] bg-[#1DD1001A]"><img src="./images/seat-green.png" alt=""> <span id="available">8</span>
                                     seats left
                                 </a>
 
@@ -182,7 +191,7 @@
 
                     <div>
                         <img src="./images/fare.png" alt="">
-                        <h1 class="text-3xl font-bold">550 Taka</h1>
+                        <h1 class="text-3xl font-bold"> <span id="taka">550</span>  Taka</h1>
                         <p class="text-sm font-normal">Per Set</p>
                     </div>
 
@@ -201,7 +210,7 @@
         </section>
 
 
-        <section class="my-20 container mx-auto">
+        <section  class="my-20 container mx-auto">
             <div class="flex justify-between">
                 <div class="w-6/12">
 
@@ -225,14 +234,15 @@
                     </div>
 
 
-                    <div class="flex justify-around mt-5">
+                    <div id="buyTicket" class="flex justify-around mt-5">
                         <div class="grid grid-cols-2 gap-8">
+                            
                            
-                            <button class="btn btn-active btn-ghost">A1</button>
-                            <button class="btn btn-active btn-ghost">A2</button>
-                            <button class="btn btn-active btn-ghost">B1</button>
-                            <button class="btn btn-active btn-ghost">B2</button>
-                            <button class="btn btn-active btn-ghost">C1</button>
+                            <button   class="btn btn-active btn-ghost A">A1</button>
+                            <button  class="btn btn-active btn-ghost A">A2</button>
+                            <button  class="btn btn-active btn-ghost A">B1</button>
+                            <button  class="btn btn-active btn-ghost A">B2</button>
+                            <!-- <button class="btn btn-active btn-ghost">C1</button>
                             <button class="btn btn-active btn-ghost">C2</button>
                             <button class="btn btn-active btn-ghost">D1</button>
                             <button class="btn btn-active btn-ghost">D2</button>
@@ -247,16 +257,16 @@
                             <button class="btn btn-active btn-ghost">I1</button>
                             <button class="btn btn-active btn-ghost">I2</button>
                             <button class="btn btn-active btn-ghost">J1</button>
-                            <button class="btn btn-active btn-ghost">J2</button>
+                            <button class="btn btn-active btn-ghost">J2</button> -->
                             
                         </div>
 
                         <div class="grid grid-cols-2 gap-8">
-                            <button class="btn btn-active btn-ghost">A3</button>
-                            <button class="btn btn-active btn-ghost">A4</button>
-                            <button class="btn btn-active btn-ghost">B3</button>
-                            <button class="btn btn-active btn-ghost">B4</button>
-                            <button class="btn btn-active btn-ghost">C3</button>
+                            <button  class="btn btn-active btn-ghost A">A3</button>
+                            <button  class="btn btn-active btn-ghost A">A4</button>
+                            <button  class="btn btn-active btn-ghost A">B3</button>
+                            <button  class="btn btn-active btn-ghost A">B4</button>
+                            <!-- <button class="btn btn-active btn-ghost">C3</button>
                             <button class="btn btn-active btn-ghost">C4</button>
                             <button class="btn btn-active btn-ghost">D3</button>
                             <button class="btn btn-active btn-ghost">D4</button>
@@ -271,7 +281,7 @@
                             <button class="btn btn-active btn-ghost">I3</button>
                             <button class="btn btn-active btn-ghost">I4</button>
                             <button class="btn btn-active btn-ghost">J3</button>
-                            <button class="btn btn-active btn-ghost">J4</button>
+                            <button class="btn btn-active btn-ghost">J4</button> -->
                             
                         </div>
                     </div>
@@ -293,12 +303,16 @@
                     <div class="bg-[#F7F8F8] h-auto">
 
                         <div class="flex justify-between">
-                            <h1>Seat <span>0</span></h1>
+                            <h1 >Seat <span id="seat-count">0</span></h1>
                             <h1>Costs</h1>
                             <h1>Price</h1>
                         </div>
 
                         <hr>
+
+                        <div id="addedSeat">
+
+                        </div>
 
                         <hr>
                         <div class="flex justify-between">
@@ -360,39 +374,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             </div>
 
 
@@ -414,6 +395,14 @@
 
 
     </main>
+
+
+
+
+
+    <script src="scripts/script.js"  
+    
+    ></script>
 
 </body>
 
